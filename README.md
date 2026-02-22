@@ -4,9 +4,38 @@
 
 ## 安装
 
+### 方式一：Git Clone（推荐）
+
 ```bash
-npx agentskills add global-ecom-skills/global-ecom-skills
+# 进入 OpenClaw skills 目录
+cd ~/.openclaw/workspace/skills
+
+# 克隆仓库
+git clone https://github.com/global-ecom-skills/global-ecom-skills.git cross-border-product-scout
+
+# 完成！skill 会自动被 OpenClaw 识别
 ```
+
+### 方式二：手动下载
+
+1. 下载仓库 ZIP：https://github.com/global-ecom-skills/global-ecom-skills/archive/refs/heads/main.zip
+2. 解压到 `~/.openclaw/workspace/skills/cross-border-product-scout/`
+3. 确保目录结构如下：
+   ```
+   ~/.openclaw/workspace/skills/
+   └── cross-border-product-scout/
+       ├── SKILL.md
+       ├── README.md
+       ├── package.json
+       └── references/
+   ```
+
+### 验证安装
+
+安装完成后，直接对 AI 说：
+> 帮我找几个适合在 Temu 上卖的商品
+
+如果 AI 开始执行选品流程，说明安装成功！
 
 ## 功能
 
