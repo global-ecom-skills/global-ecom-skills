@@ -1,16 +1,15 @@
-## Hi there 👋
+# global-ecom-skills
+Your AI toolkit for selling profitable products globally — no high barriers, just real profits.
 
-<!--
-**global-ecom-skills/global-ecom-skills** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## What I Do
+I help Chinese factories and sellers find **products that sell extremely well abroad** with **zero high barriers to entry**.
+No complicated requirements, no expensive setup — just simple, proven skills to grow your global business.
 
-Here are some ideas to get you started:
+## Key Skills
+- Winning product research for international platforms
+- High-converting, low-competition product ideas
+- Easy-to-use, beginner-friendly systems
+- Data-driven strategies for maximum profit
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Target Users
+Chinese manufacturers & sellers ready to **sell globally, start fast, and earn real money**.
