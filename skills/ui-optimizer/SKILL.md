@@ -219,11 +219,7 @@ nav a.active {
   padding: 24px;
 }
 
-.feature-icon {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
+/* 禁止使用 Emoji 图标，改用纯文字或 SVG 线性图标 */
 .feature-item h3 {
   font-size: 16px;
   font-weight: 600;
@@ -237,6 +233,11 @@ nav a.active {
   line-height: 1.5;
 }
 ```
+
+**图标规范**:
+- ❌ 禁止使用 Emoji 作为功能图标（AI 味过重）
+- ✅ 使用简洁的 SVG 线性图标（stroke-width: 1.5-2px）
+- ✅ 或直接省略图标，用文字标题即可
 
 ### 6. 底部区域
 
@@ -336,6 +337,7 @@ a:hover {
 - ❌ 高饱和撞色
 - ❌ 夸张装饰元素
 - ❌ 字体层级混乱
+- ❌ **Emoji 图标作为功能展示** - AI 味过重，应使用简洁的 SVG 线性图标或纯文字
 
 ### 布局禁忌
 - ❌ 信息拥挤
