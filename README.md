@@ -1,15 +1,172 @@
-# global-ecom-skills
-Your AI toolkit for selling profitable products globally — no high barriers, just real profits.
+# 跨境电商选品智能体 🛒
 
-## What I Do
-This repository helps Chinese factories and sellers find **products that sell extremely well abroad** with **zero high barriers to entry**.
-No complicated requirements, no expensive setup — just simple, proven skills to grow your global business.
+帮助用户发现「亚马逊热卖 → Temu 蓝海 → 1688 低价货源」的选品套利机会。
 
-## Key Skills
-- Winning product research for international platforms
-- High-converting, low-competition product ideas
-- Easy-to-use, beginner-friendly systems
-- Data-driven strategies for maximum profit
+## 安装
 
-## Target Users
-Chinese manufacturers & sellers ready to **sell globally, start fast, and earn real money**.
+### 方式一：Git Clone（推荐）
+
+```bash
+# 进入 OpenClaw skills 目录
+cd ~/.openclaw/workspace/skills
+
+# 克隆仓库
+git clone https://github.com/global-ecom-skills/global-ecom-skills.git cross-border-product-scout
+
+# 完成！skill 会自动被 OpenClaw 识别
+```
+
+### 方式二：手动下载
+
+1. 下载仓库 ZIP：https://github.com/global-ecom-skills/global-ecom-skills/archive/refs/heads/main.zip
+2. 解压到 `~/.openclaw/workspace/skills/cross-border-product-scout/`
+3. 确保目录结构如下：
+   ```
+   ~/.openclaw/workspace/skills/
+   └── cross-border-product-scout/
+       ├── SKILL.md
+       ├── README.md
+       ├── package.json
+       └── references/
+   ```
+
+### 验证安装
+
+安装完成后，直接对 AI 说：
+> 帮我找几个适合在 Temu 上卖的商品
+
+如果 AI 开始执行选品流程，说明安装成功！
+
+## 功能
+
+- 🔍 **亚马逊热卖品发现** - 扫描 Best Sellers、Movers & Shakers
+- 📊 **Temu 市场分析** - 检查竞争饱和度
+- 💰 **1688 供应商比价** - 找到低价货源
+- ✅ **资质门槛筛查** - 避开高门槛品类
+- 📈 **利润测算** - 自动计算毛利空间
+
+## 使用示例
+
+### 示例 1：自动选品（推荐新手）
+
+**你说：**
+> 帮我找几个适合在 Temu 上卖的商品
+
+**AI 会：**
+1. 访问亚马逊 Best Sellers 页面，扫描 Home & Kitchen、Pet Supplies、Office Products 等低门槛品类
+2. 筛选符合条件的热卖品（BSR < 10000，价格 $15-100）
+3. 去 Temu 搜索这些商品，检查市场饱和度
+4. 上 1688 查找对应供应商和价格
+5. 输出完整选品报告，包含利润测算和推荐评分
+
+**输出示例：**
+```
+## 选品报告：热层压塑料纸
+
+### 亚马逊数据
+- 当前售价：$18
+- BSR 排名：#6 (Office Products)
+- 评分：4.8/5
+
+### Temu 市场分析
+- 搜索结果数：30-50 个
+- 市场饱和度：🟢低（蓝海机会）
+
+### 1688 供应商
+- 拿货价：¥15-25/100片（约 $2-3.5）
+- 起订量：500-1000 片
+
+### 利润测算
+- 建议 Temu 售价：$9
+- 预估毛利：$5.15（毛利率 57%）
+
+### 综合评分：⭐⭐⭐⭐⭐ (5/5)
+强烈推荐入场！
+```
+
+---
+
+### 示例 2：指定品类选品
+
+**你说：**
+> 帮我在「宠物用品」品类找几个能搬到 Temu 卖的商品
+
+**AI 会：**
+1. 专注扫描亚马逊 Pet Supplies 品类的 Best Sellers
+2. 排除宠物食品（需要 FDA 认证）
+3. 重点关注宠物玩具、清洁用品、配件等低门槛子品类
+4. 输出该品类的选品报告
+
+---
+
+### 示例 3：分析指定商品
+
+**你说：**
+> 分析一下这个亚马逊商品能不能搬到 Temu 卖：https://www.amazon.com/dp/B07VNSXY31
+
+**AI 会：**
+1. 访问该商品页面，获取价格、BSR、评论数等数据
+2. 在 Temu 搜索同类商品，分析竞争情况
+3. 在 1688 查找供应商和拿货价
+4. 检查是否需要特殊资质认证
+5. 给出是否值得做的建议
+
+**输出示例：**
+```
+## 商品分析：EZlifego 纳米双面胶带
+
+✅ 亚马逊表现：BSR #20，12.7万评价，市场验证充分
+⚠️ Temu 竞争：中等饱和（100-150个竞品）
+✅ 1688 货源：拿货价 ¥3-8，利润空间大
+✅ 资质门槛：无特殊认证要求
+
+**结论：值得做，建议差异化包装或多规格组合销售**
+```
+
+---
+
+### 示例 4：对比多个商品
+
+**你说：**
+> 帮我对比这三个商品哪个更适合做 Temu：
+> 1. 保温水杯
+> 2. 桌面收纳盒  
+> 3. 手机支架
+
+**AI 会：**
+1. 分别在亚马逊查找这三类商品的热卖款
+2. 对比 Temu 市场饱和度
+3. 对比 1688 拿货价和利润空间
+4. 对比资质门槛
+5. 给出优先级排序和推荐理由
+
+---
+
+### 示例 5：查看推荐品类
+
+**你说：**
+> 有哪些品类适合新手做跨境电商？
+
+**AI 会列出低门槛品类：**
+- 家居收纳（无认证要求）
+- 厨房小工具（非电动，避开食品接触类）
+- 宠物用品（非食品）
+- 办公文具
+- 户外露营配件
+- 手机配件（非电池类）
+- 汽车配件（非安全件）
+
+并解释为什么这些品类门槛低、适合新手。
+
+## 推荐品类
+
+低门槛、适合新手：
+- 家居收纳
+- 厨房小工具（非电动）
+- 宠物用品（非食品）
+- 办公文具
+- 户外露营配件
+
+## License
+
+MIT

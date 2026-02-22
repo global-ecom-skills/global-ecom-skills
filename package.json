@@ -1,0 +1,24 @@
+{
+  "name": "cross-border-product-scout",
+  "version": "1.0.0",
+  "description": "跨境电商选品智能体 - 发现亚马逊热卖品并搬运到 Temu 销售的套利机会",
+  "keywords": [
+    "cross-border",
+    "ecommerce",
+    "amazon",
+    "temu",
+    "1688",
+    "product-research",
+    "arbitrage"
+  ],
+  "author": "global-ecom-skills",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/global-ecom-skills/global-ecom-skills"
+  },
+  "agentskill": {
+    "name": "cross-border-product-scout",
+    "entry": "SKILL.md"
+  }
+}
