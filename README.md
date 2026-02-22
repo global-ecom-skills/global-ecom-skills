@@ -1,15 +1,37 @@
-# global-ecom-skills
-Your AI toolkit for selling profitable products globally — no high barriers, just real profits.
+# 跨境电商选品智能体 🛒
 
-## What I Do
-This repository helps Chinese factories and sellers find **products that sell extremely well abroad** with **zero high barriers to entry**.
-No complicated requirements, no expensive setup — just simple, proven skills to grow your global business.
+帮助用户发现「亚马逊热卖 → Temu 蓝海 → 1688 低价货源」的选品套利机会。
 
-## Key Skills
-- Winning product research for international platforms
-- High-converting, low-competition product ideas
-- Easy-to-use, beginner-friendly systems
-- Data-driven strategies for maximum profit
+## 安装
 
-## Target Users
-Chinese manufacturers & sellers ready to **sell globally, start fast, and earn real money**.
+```bash
+npx agentskills add global-ecom-skills/global-ecom-skills
+```
+
+## 功能
+
+- 🔍 **亚马逊热卖品发现** - 扫描 Best Sellers、Movers & Shakers
+- 📊 **Temu 市场分析** - 检查竞争饱和度
+- 💰 **1688 供应商比价** - 找到低价货源
+- ✅ **资质门槛筛查** - 避开高门槛品类
+- 📈 **利润测算** - 自动计算毛利空间
+
+## 使用示例
+
+```
+帮我找几个适合在 Temu 上卖的商品
+分析一下这个亚马逊商品能不能搬到 Temu 卖
+```
+
+## 推荐品类
+
+低门槛、适合新手：
+- 家居收纳
+- 厨房小工具（非电动）
+- 宠物用品（非食品）
+- 办公文具
+- 户外露营配件
+
+## License
+
+MIT
