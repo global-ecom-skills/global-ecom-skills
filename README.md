@@ -40,6 +40,7 @@ npx skills install global-ecom-skills/global-ecom-skills/cross-border-product-sc
 |-------|------|------|
 | [cross-border-product-scout](./skills/cross-border-product-scout) | 跨境电商选品智能体，发现 Amazon→Temu→1688 套利机会 | ✅ 可用 |
 | [platform-auto-login](./skills/platform-auto-login) | 电商平台自动登录，支持 Temu/Amazon/1688 | ✅ 可用 |
+| [ui-optimizer](./skills/ui-optimizer) | 产品页面 UI 优化，基于 Material Design 规范 | ✅ 可用 |
 
 ## 📁 目录结构
 
@@ -50,7 +51,10 @@ global-ecom-skills/
 │   │   ├── SKILL.md          # Skill 定义文件
 │   │   ├── README.md         # 使用说明
 │   │   └── references/       # 参考资料
-│   └── platform-auto-login/
+│   ├── platform-auto-login/
+│   │   ├── SKILL.md
+│   │   └── README.md
+│   └── ui-optimizer/
 │       ├── SKILL.md
 │       └── README.md
 ├── template/                  # Skill 模板
