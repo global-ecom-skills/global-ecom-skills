@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global E-commerce Skills - 跨境电商 AI Agent Skills</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --accent: #00d4aa;
+            --accent-hover: #00f5c4;
+            --border: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--text-primary);
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            font-size: 0.6rem;
+            color: var(--accent);
+            white-space: pre;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        @media (max-width: 768px) {
+            .ascii-art {
+                font-size: 0.35rem;
+            }
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Install Command */
+        .install-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .install-box code {
+            font-family: 'Courier New', monospace;
+            color: var(--accent);
+        }
+        
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.2s;
+        }
+        
+        .copy-btn:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .skills-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        /* Skill Card */
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.1);
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .skill-badge {
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .skill-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .skill-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .skill-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        /* Features Section */
+        .features {
+            background: var(--bg-secondary);
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+        
+        .features-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">🌐 <span>Global E-commerce Skills</span></a>
+            <nav>
+                <a href="#skills">Skills</a>
+                <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/docs">Docs</a>
+                <a href="https://github.com/global-ecom-skills/global-ecom-skills">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <pre class="ascii-art">
+ ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     
+██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     
+██║  ███╗██║     ██║   ██║██████╔╝███████║██║     
+██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     
+╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗
+ ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+███████╗ ██████╗ ██████╗ ███╗   ███╗              
+██╔════╝██╔════╝██╔═══██╗████╗ ████║              
+█████╗  ██║     ██║   ██║██╔████╔██║              
+██╔══╝  ██║     ██║   ██║██║╚██╔╝██║              
+███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║              
+╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝              
+        </pre>
+        <h1>跨境电商 AI Agent Skills</h1>
+        <p>帮助你发现热销、高利润的跨境电商选品机会。一键安装，增强你的 AI Agent 能力。</p>
+        
+        <div class="install-box">
+            <code>$ npx skills install global-ecom-skills/global-ecom-skills</code>
+            <button class="copy-btn" onclick="copyCommand()">📋</button>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <h2>📦 可用 Skills</h2>
+        <div class="skills-grid">
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/skills/cross-border-product-scout" class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">cross-border-product-scout</span>
+                    <span class="skill-badge">热门</span>
+                </div>
+                <p class="skill-description">
+                    跨境电商选品智能体。发现亚马逊热卖品并搬运到 Temu 销售的套利机会。
+                    支持 Amazon 热销榜分析、Temu 竞品对比、1688 供应商比价。
+                </p>
+                <div class="skill-meta">
+                    <span>🏷️ 选品分析</span>
+                    <span>📊 利润计算</span>
+                    <span>🔍 市场调研</span>
+                </div>
+            </a>
+            
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/skills/platform-auto-login" class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">platform-auto-login</span>
+                    <span class="skill-badge">工具</span>
+                </div>
+                <p class="skill-description">
+                    跨境电商平台自动登录。支持 Temu、Amazon、1688 等平台的自动登录，
+                    保持登录状态以便后续数据采集和操作。
+                </p>
+                <div class="skill-meta">
+                    <span>🔐 自动登录</span>
+                    <span>🌐 多平台</span>
+                    <span>🤖 浏览器控制</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-content">
+            <h2>✨ 为什么选择 Global E-commerce Skills？</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>精准选品</h3>
+                    <p>基于真实销售数据，发现高潜力商品</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>利润分析</h3>
+                    <p>自动计算采购成本和预期利润率</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <h3>自动化</h3>
+                    <p>减少重复操作，提升工作效率</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>持续更新</h3>
+                    <p>跟随市场变化，不断优化策略</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for Cross-border E-commerce</p>
+        <p>
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills">GitHub</a> · 
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/issues">Issues</a> · 
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/blob/main/LICENSE">License</a>
+        </p>
+    </footer>
+
+    <script>
+        function copyCommand() {
+            const command = 'npx skills install global-ecom-skills/global-ecom-skills';
+            navigator.clipboard.writeText(command).then(() => {
+                alert('已复制到剪贴板！');
+            });
+        }
+    </script>
+</body>
+</html>
