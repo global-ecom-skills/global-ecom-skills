@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global E-commerce Skills Directory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <pre class="ascii-logo">
+ ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     
+██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     
+██║  ███╗██║     ██║   ██║██████╔╝███████║██║     
+██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     
+╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗
+ ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔════╝██╔═══██╗████╗ ████║
+█████╗  ██║     ██║   ██║██╔████╔██║
+██╔══╝  ██║     ██║   ██║██║╚██╔╝██║
+███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║
+╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝
+            </pre>
+            <h1 class="tagline">The Global E-commerce Skills Ecosystem</h1>
+            <p class="description">
+                AI-powered skills for cross-border e-commerce. Find winning products, 
+                source from suppliers, and sell globally with zero barriers.
+            </p>
+        </header>
+
+        <!-- Install Section -->
+        <section class="install-section">
+            <h2>Try it now</h2>
+            <div class="install-command">
+                <span class="prompt">$</span>
+                <code>npx skillsadd global-ecom-skills/&lt;skill-name&gt;</code>
+                <button class="copy-btn" onclick="copyCommand()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Supported Agents Section -->
+        <section class="agents-section">
+            <h2>Available for these agents</h2>
+            <div class="agents-scroll-container">
+                <div class="agents-scroll">
+                    <div class="agent-item"><img src="https://claude.ai/favicon.ico" alt="Claude Code"><span>Claude Code</span></div>
+                    <div class="agent-item"><img src="https://cursor.sh/favicon.ico" alt="Cursor"><span>Cursor</span></div>
+                    <div class="agent-item"><img src="https://www.github.com/favicon.ico" alt="GitHub Copilot"><span>Copilot</span></div>
+                    <div class="agent-item"><img src="https://cline.bot/favicon.ico" alt="Cline"><span>Cline</span></div>
+                    <div class="agent-item"><img src="https://openai.com/favicon.ico" alt="OpenAI Codex"><span>Codex</span></div>
+                    <div class="agent-item"><img src="https://gemini.google.com/favicon.ico" alt="Gemini"><span>Gemini</span></div>
+                    <div class="agent-item"><img src="https://kiro.dev/favicon.ico" alt="Kiro"><span>Kiro</span></div>
+                    <div class="agent-item"><img src="https://roocode.com/favicon.ico" alt="Roo Code"><span>Roo Code</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Leaderboard -->
+        <section class="leaderboard-section">
+            <h2>Skills Directory</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search skills..." class="search-input">
+                <span class="search-shortcut">/</span>
+            </div>
+            <div class="tabs">
+                <button class="tab active" data-tab="all">All Skills</button>
+                <button class="tab" data-tab="research">Research</button>
+                <button class="tab" data-tab="optimization">Optimization</button>
+            </div>
+            <div class="skills-table">
+                <div class="table-header">
+                    <span class="col-rank">#</span>
+                    <span class="col-skill">Skill</span>
+                    <span class="col-installs">Installs</span>
+                </div>
+                <div id="skills-list" class="skills-list">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built for Chinese manufacturers & sellers ready to sell globally</p>
+            <div class="footer-links">
+                <a href="https://github.com/global-ecom-skills/global-ecom-skills">GitHub</a>
+                <span>•</span>
+                <a href="#docs">Documentation</a>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
