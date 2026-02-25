@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global E-commerce Skills - 跨境电商 AI Agent Skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           UI Optimizer v1.0 - Material Design
+           对标: skills.sh
+           ======================================== */
+        
+        :root {
+            /* 中性色 */
+            --white: #FFFFFF;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #EEEEEE;
+            --gray-300: #E0E0E0;
+            --gray-600: #757575;
+            --gray-700: #616161;
+            --gray-800: #424242;
+            --gray-900: #212121;
+            
+            /* 主色调 */
+            --primary: #1976D2;
+            --primary-light: #E3F2FD;
+            --primary-dark: #1565C0;
+            
+            /* 辅助色 */
+            --accent: #00897B;
+            --accent-light: #E0F2F1;
+            
+            /* 文字色 */
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-hint: #999999;
+            
+            /* 间距 */
+            --spacing-xs: 8px;
+            --spacing-sm: 12px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+            --spacing-3xl: 64px;
+            
+            /* 圆角 */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+            
+            /* 阴影 */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        /* ======== Header ======== */
+        header {
+            background: var(--white);
+            height: 64px;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .logo-icon {
+            font-size: 24px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+        
+        /* 汉堡菜单 */
+        .hamburger {
+            display: none;
+            width: 24px;
+            height: 24px;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 1px;
+            transition: all 0.2s ease;
+        }
+        
+        /* ======== Hero ======== */
+        .hero {
+            background: var(--white);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            text-align: center;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .ascii-art {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 8px;
+            color: var(--primary);
+            white-space: pre;
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 520px;
+            margin: 0 auto var(--spacing-xl);
+            line-height: 1.6;
+        }
+        
+        /* 安装命令框 */
+        .install-box {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .install-box code {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 13px;
+            color: var(--text-primary);
+        }
+        
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-hint);
+            cursor: pointer;
+            padding: var(--spacing-xs);
+            border-radius: var(--radius-sm);
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .copy-btn:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* ======== Skills Section ======== */
+        .skills-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) var(--spacing-lg);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        /* Skill Card */
+        .skill-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s ease;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .skill-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .skill-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .skill-badge.tool {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+        
+        .skill-description {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .skill-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+        
+        .skill-tag {
+            font-size: 12px;
+            color: var(--text-hint);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        /* ======== Features ======== */
+        .features {
+            background: var(--gray-50);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .features-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+        }
+        
+        .feature-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* ======== Footer ======== */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 13px;
+            color: var(--text-hint);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+        
+        footer a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+        
+        .footer-links span {
+            color: var(--gray-300);
+        }
+        
+        /* ======== 响应式 ======== */
+        @media (max-width: 768px) {
+            header {
+                height: 56px;
+            }
+            
+            .header-content {
+                padding: 0 var(--spacing-md);
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            nav.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 56px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: var(--spacing-md);
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid var(--gray-200);
+            }
+            
+            nav.active a {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .ascii-art {
+                font-size: 5px;
+                margin-bottom: var(--spacing-lg);
+            }
+            
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .hero-description {
+                font-size: 14px;
+            }
+            
+            .install-box {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .install-box code {
+                font-size: 11px;
+            }
+            
+            .skills-section {
+                padding: var(--spacing-xl) var(--spacing-md);
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .features h2 {
+                font-size: 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .feature-item {
+                padding: var(--spacing-md);
+            }
+            
+            footer {
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ascii-art {
+                font-size: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span>Global E-commerce Skills</span>
+            </a>
+            <button class="hamburger" onclick="toggleNav()" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav">
+                <a href="#skills">Skills</a>
+                <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/docs">Docs</a>
+                <a href="https://github.com/global-ecom-skills/global-ecom-skills">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <pre class="ascii-art">
+ ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     
+██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     
+██║  ███╗██║     ██║   ██║██████╔╝███████║██║     
+██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     
+╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗
+ ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+███████╗ ██████╗ ██████╗ ███╗   ███╗              
+██╔════╝██╔════╝██╔═══██╗████╗ ████║              
+█████╗  ██║     ██║   ██║██╔████╔██║              
+██╔══╝  ██║     ██║   ██║██║╚██╔╝██║              
+███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║              
+╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝              
+        </pre>
+        <h1>跨境电商 AI Agent Skills</h1>
+        <p class="hero-description">帮助你发现热销、高利润的跨境电商选品机会。一键安装，增强你的 AI Agent 能力。</p>
+        
+        <div class="install-box">
+            <code>$ npx skills install global-ecom-skills/global-ecom-skills</code>
+            <button class="copy-btn" onclick="copyCommand()" title="复制命令">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <div class="section-header">
+            <h2>可用 Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/skills/cross-border-product-scout" class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">cross-border-product-scout</span>
+                    <span class="skill-badge">热门</span>
+                </div>
+                <p class="skill-description">
+                    跨境电商选品智能体。发现亚马逊热卖品并搬运到 Temu 销售的套利机会。支持 Amazon 热销榜分析、Temu 竞品对比、1688 供应商比价。
+                </p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏷️ 选品分析</span>
+                    <span class="skill-tag">📊 利润计算</span>
+                    <span class="skill-tag">🔍 市场调研</span>
+                </div>
+            </a>
+            
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/skills/platform-auto-login" class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">platform-auto-login</span>
+                    <span class="skill-badge tool">工具</span>
+                </div>
+                <p class="skill-description">
+                    跨境电商平台自动登录。支持 Temu、Amazon、1688 等平台的自动登录，保持登录状态以便后续数据采集和操作。
+                </p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🔐 自动登录</span>
+                    <span class="skill-tag">🌐 多平台</span>
+                    <span class="skill-tag">🤖 浏览器控制</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/tree/main/skills/ui-optimizer" class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">ui-optimizer</span>
+                    <span class="skill-badge tool">工具</span>
+                </div>
+                <p class="skill-description">
+                    产品页面 UI 优化智能体。基于 Google Material Design 规范和 skills.sh 对标产品，优化网页 UI/UX 设计。
+                </p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 UI设计</span>
+                    <span class="skill-tag">📱 响应式</span>
+                    <span class="skill-tag">✨ Material</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-content">
+            <h2>为什么选择 Global E-commerce Skills？</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>精准选品</h3>
+                    <p>基于真实销售数据，发现高潜力商品</p>
+                </div>
+                <div class="feature-item">
+                    <h3>利润分析</h3>
+                    <p>自动计算采购成本和预期利润率</p>
+                </div>
+                <div class="feature-item">
+                    <h3>自动化</h3>
+                    <p>减少重复操作，提升工作效率</p>
+                </div>
+                <div class="feature-item">
+                    <h3>持续更新</h3>
+                    <p>跟随市场变化，不断优化策略</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for Cross-border E-commerce</p>
+        <div class="footer-links">
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills">GitHub</a>
+            <span>·</span>
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/issues">Issues</a>
+            <span>·</span>
+            <a href="https://github.com/global-ecom-skills/global-ecom-skills/blob/main/LICENSE">License</a>
+        </div>
+    </footer>
+
+    <script>
+        function copyCommand() {
+            const command = 'npx skills install global-ecom-skills/global-ecom-skills';
+            navigator.clipboard.writeText(command).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                }, 2000);
+            });
+        }
+        
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

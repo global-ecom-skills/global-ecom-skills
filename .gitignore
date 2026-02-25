@@ -1,0 +1,35 @@
+# .gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+.cache/
